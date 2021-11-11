@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# You Name It
+*A collaborative name generator*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
 
-## Available Scripts
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Goals
+- Demonstrate mastery of React, React Router, asynchronous JavaScript, and end-to-end testing with Cypress
+- Create personas and user stories to describe your target audience
+- Work within constraints to deliver a product for your niche audience, which helps solve a problem unique to them.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
+- React
+- React Router
+- Cypress
+- CSS3
+- HTML5
+- Postman
 
-### `npm run build`
+## Setup
+To run the app locally:
+  - Fork [this repository](https://github.com/anthony-iacono/you-name-it)
+  - Clone the repository and cd into it
+  - Run `npm install`
+  - Run `npm start`
+  - Copy the local host address to your browser, and enjoy!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributors
+  - Anthony Iacono [GitHub](https://github.com/anthony-iacono) | [LinkedIn](https://www.linkedin.com/in/anthony-iacono/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Project specification](https://frontend.turing.edu/projects/module-3/showcase.html) provided by:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Turing School of Software & Design
+[GitHub](https://github.com/turingschool) | [LinkedIn](https://www.linkedin.com/school/turingschool/) | [Website](https://turing.edu/)
 
-### `npm run eject`
+APIs:
+  - [Merriam-Webster's Collegiate® Thesaurus](https://dictionaryapi.com/products/api-collegiate-thesaurus)
+  - [Merriam-Webster's Collegiate® Dictionary with Audio](https://dictionaryapi.com/products/api-collegiate-dictionary)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Made with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Planning
+- App development [planned and tracked](https://github.com/anthony-iacono/cinema-central/projects/1) using GitHub Projects
+- [Wireframe](https://www.figma.com/file/yiTkThOEDB0yAXhhUwCunr/Rancid-Tomatillos?node-id=0%3A1) created using [Canva](https://www.canva.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Wins
+  -
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Challenges
+  -
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Iterations
+  -
