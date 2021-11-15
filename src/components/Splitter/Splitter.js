@@ -10,16 +10,16 @@ const Splitter = ({ handleSubmit }: SplitterProps) => {
   const [keywords, setKeywords] = useState('');
   return (
     <main>
-      <form className="form" onSubmit={(e) => handleSubmit(e, keywords)}>
+      <form className="form cy-form" onSubmit={(e) => handleSubmit(e, keywords)}>
         <input
           aria-label="keywords"
-          className="input"
+          className="input cy-input"
           type="text"
           placeholder="enter keywords here"
           value={keywords}
           onChange={(e) => setKeywords(e.target.value)}
         />
-        <button className="button" type="submit">Submit</button>
+        <button className="button cy-button" type="submit">Submit</button>
       </form>
     </main>
   );

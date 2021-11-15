@@ -32,7 +32,8 @@
     "ignorePatterns": [
       "node_modules/",
       "src/serviceWorker.js",
-      "src/reportWebVitals.js"
+      "src/reportWebVitals.js",
+      "cypress/*"
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
