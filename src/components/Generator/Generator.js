@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Generator.css';
+import KeywordBox from '../KeywordBox/KeywordBox';
 
 type GeneratorProps = {
   keywords: string[];
@@ -11,11 +12,7 @@ export default function Generator({ keywords }: GeneratorProps) {
   let inputBoxes;
   if (keywords) {
     inputBoxes = keywords.map((keyword) => (
-      <input
-        type="text"
-        value={keyword}
-        key={keyword}
-      />
+      <KeywordBox keyword={keyword} />
     ));
   }
 
