@@ -9,9 +9,10 @@ type SplitterProps = {
 const Splitter = ({ handleSubmit }: SplitterProps) => {
   const [keywords, setKeywords] = useState('');
   return (
-    <>
+    <main>
       <form className="form" onSubmit={(e) => handleSubmit(e, keywords)}>
         <input
+          aria-label="keywords"
           className="input"
           type="text"
           placeholder="enter keywords here"
@@ -20,7 +21,7 @@ const Splitter = ({ handleSubmit }: SplitterProps) => {
         />
         <button className="button" type="submit">Submit</button>
       </form>
-    </>
+    </main>
   );
 };
 

@@ -1,5 +1,6 @@
 .heading {
   text-align: center;
   font-size: 5rem;
-  -webkit-text-stroke: 1px black;
+  color: black;
+  background-color: white;
 }
