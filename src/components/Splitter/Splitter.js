@@ -16,7 +16,7 @@ const Splitter = ({ setKeywords }: SplitterProps) => {
   };
   return (
     <main>
-      <form className="form cy-form" onSubmit={(e) => handleSubmit(e, userInput)}>
+      <form className="form cy-form" onSubmit={(e) => handleSubmit(e)}>
         <input
           aria-label="keywords"
           className="input cy-input"
@@ -25,9 +25,11 @@ const Splitter = ({ setKeywords }: SplitterProps) => {
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
-        <button className="button cy-button" type="submit">
-          Submit
-        </button>
+        <Link to="/generator">
+          <button className="button cy-button" type="submit">
+            Submit
+          </button>
+        </Link>
       </form>
     </main>
   );
