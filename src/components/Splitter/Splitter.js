@@ -9,13 +9,13 @@ type SplitterProps = {
 export default function Splitter({ submitUserInput }: SplitterProps) {
   const [userInput, setUserInput] = useState('');
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const splitKeywords = userInput.split(' ');
     submitUserInput(splitKeywords);
   };
   return (
-    <main>
-      <form className="form cy-form" onSubmit={(e) => handleSubmit(e)}>
+    <div>
+      <form className="form cy-form">
         <input
           aria-label="keywords"
           className="input cy-input"
@@ -25,11 +25,15 @@ export default function Splitter({ submitUserInput }: SplitterProps) {
           onChange={(e) => setUserInput(e.target.value)}
         />
         <Link to="/generator">
-          <button className="button cy-button" type="submit">
+          <button
+            className="button cy-button"
+            type="submit"
+            onClick={(e) => handleSubmit(e)}
+          >
             Submit
           </button>
         </Link>
       </form>
-    </main>
+    </div>
   );
 }

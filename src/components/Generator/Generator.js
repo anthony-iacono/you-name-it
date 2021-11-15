@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Generator.css';
 
 type GeneratorProps = {
@@ -7,7 +7,7 @@ type GeneratorProps = {
 
 export default function Generator({ keywords }: GeneratorProps) {
   // const keywordsNew = ['test1', 'test2'];
-  const [generatorKeywords, setGeneratorKeywords] = useState([]);
+  // const [generatorKeywords, setGeneratorKeywords] = useState([]);
   let inputBoxes;
   if (keywords) {
     inputBoxes = keywords.map((keyword) => (
@@ -18,12 +18,11 @@ export default function Generator({ keywords }: GeneratorProps) {
       />
     ));
   }
-  console.log(inputBoxes);
 
   return (
-    <main>
-      <h2>generator</h2>
-      { inputBoxes.length === 0 ? <h2>Loading...</h2> : inputBoxes }
-    </main>
+    <div>
+      <h2>generator here</h2>
+      { !inputBoxes.length ? <h2>Loading...</h2> : inputBoxes }
+    </div>
   );
 }
