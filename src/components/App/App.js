@@ -5,10 +5,16 @@ import Splitter from '../Splitter/Splitter';
 
 function App(): React.Node {
   const [keywords, setKeywords] = React.useState('');
+
+  const handleSubmit = (userKeywords) => {
+    const splitKeywords = userKeywords.split(' ');
+    setKeywords(splitKeywords);
+  };
+
   return (
     <div className="App">
       <Header />
-      { !keywords && <Splitter handleSubmit={setKeywords} /> }
+      { !keywords && <Splitter handleSubmit={handleSubmit} /> }
     </div>
   );
 }

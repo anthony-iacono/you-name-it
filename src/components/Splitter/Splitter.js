@@ -13,7 +13,7 @@ const Splitter = ({ handleSubmit }: SplitterProps) => {
       <form onSubmit={() => handleSubmit(keywords)}>
         <input
           type="text"
-          placeholder="keywords"
+          placeholder="enter keywords here"
           value={keywords}
           onChange={(e) => setKeywords(e.target.value)}
         />
