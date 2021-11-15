@@ -10,7 +10,7 @@ const Splitter = ({ handleSubmit }: SplitterProps) => {
   const [keywords, setKeywords] = useState('');
   return (
     <>
-      <form className="form" onSubmit={() => handleSubmit(keywords)}>
+      <form className="form" onSubmit={(e) => handleSubmit(e, keywords)}>
         <input
           className="input"
           type="text"
