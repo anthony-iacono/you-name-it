@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
 import Splitter from '../Splitter/Splitter';
@@ -7,22 +7,23 @@ import Generator from '../Generator/Generator';
 
 function App(): React.Node {
   const [keywords, setKeywords] = React.useState([]);
+  const submitUserInput = (userInput) => {
+    setKeywords(userInput);
+  };
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Splitter setKeywords={setKeywords} />}
-          />
-          <Route
-            path="/generator"
-            element={<Generator keywords={keywords} />}
-          />
-        </Routes>
-      </Router>
+      <Header />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={<Splitter setKeywords={submitUserInput} />}
+        />
+        <Route
+          path="/generator"
+          element={<Generator keywords={keywords} />}
+        />
+      </Routes>
     </div>
   );
 }

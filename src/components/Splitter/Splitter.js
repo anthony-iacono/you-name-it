@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import './Splitter.css';
 
 type SplitterProps = {
-  setKeywords: (string) => void;
+  submitUserInput: (string) => void;
 }
 
-const Splitter = ({ setKeywords }: SplitterProps) => {
+const Splitter = ({ submitUserInput }: SplitterProps) => {
   const [userInput, setUserInput] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     const splitKeywords = userInput.split(' ');
-    setKeywords(splitKeywords);
+    submitUserInput(splitKeywords);
   };
   return (
     <main>
