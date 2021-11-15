@@ -49,10 +49,7 @@ Made with [Create React App](https://reactjs.org/docs/create-a-new-react-app.htm
 - App development [planned and tracked](https://github.com/anthony-iacono/cinema-central/projects/1) using GitHub Projects
 - [Wireframe](https://www.figma.com/file/yiTkThOEDB0yAXhhUwCunr/Rancid-Tomatillos?node-id=0%3A1) created using [Canva](https://www.canva.com/)
 
-## Wins
-  -
-
-## Challenges
+## Challenges & Wins
   -
 
 ## Future Iterations
