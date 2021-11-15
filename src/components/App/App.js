@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
 import Splitter from '../Splitter/Splitter';
-import Generator from '../Generator/Generator';
 
 function App(): React.Node {
   const [keywords, setKeywords] = React.useState([]);
@@ -13,17 +12,10 @@ function App(): React.Node {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={<Splitter setKeywords={submitUserInput} />}
-        />
-        <Route
-          path="/generator"
-          element={<Generator keywords={keywords} />}
-        />
-      </Routes>
+      <main>
+        <Splitter />
+      </main>
+      <Outlet />
     </div>
   );
 }
