@@ -10,14 +10,15 @@ const Splitter = ({ handleSubmit }: SplitterProps) => {
   const [keywords, setKeywords] = useState('');
   return (
     <>
-      <form onSubmit={() => handleSubmit(keywords)}>
+      <form className="form" onSubmit={() => handleSubmit(keywords)}>
         <input
+          className="input"
           type="text"
           placeholder="enter keywords here"
           value={keywords}
           onChange={(e) => setKeywords(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">Submit</button>
       </form>
     </>
   );
