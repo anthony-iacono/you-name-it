@@ -3,16 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
 import Splitter from '../Splitter/Splitter';
+import Generator from '../Generator/Generator';
 
 function App(): React.Node {
-  const [keywords, setKeywords] = React.useState('');
-
-  const handleSubmit = (e, userKeywords) => {
-    e.preventDefault();
-    const splitKeywords = userKeywords.split(' ');
-    setKeywords(splitKeywords);
-  };
-
+  const [keywords, setKeywords] = React.useState([]);
   return (
     <div className="App">
       <Router>
@@ -21,7 +15,11 @@ function App(): React.Node {
           <Route
             exact
             path="/"
-            element={<Splitter handleSubmit={handleSubmit} />}
+            element={<Splitter setKeywords={setKeywords} />}
+          />
+          <Route
+            path="/generator"
+            element={<Generator keywords={keywords} />}
           />
         </Routes>
       </Router>
