@@ -7,7 +7,7 @@ type SplitterProps = {
   submitUserInput: (string) => void;
 }
 
-const Splitter = ({ submitUserInput }: SplitterProps) => {
+export default function Splitter({ submitUserInput }: SplitterProps) {
   const [userInput, setUserInput] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +33,4 @@ const Splitter = ({ submitUserInput }: SplitterProps) => {
       </form>
     </main>
   );
-};
-
-export default Splitter;
+}

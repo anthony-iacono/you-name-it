@@ -5,7 +5,7 @@ type GeneratorProps = {
   keywords: string[];
 }
 
-const Generator = ({ keywords }: GeneratorProps) => {
+export default function Generator({ keywords }: GeneratorProps) {
   // const keywordsNew = ['test1', 'test2'];
   const [generatorKeywords, setGeneratorKeywords] = useState([]);
   let inputBoxes;
@@ -26,6 +26,4 @@ const Generator = ({ keywords }: GeneratorProps) => {
       { inputBoxes.length === 0 ? <h2>Loading...</h2> : inputBoxes }
     </main>
   );
-};
-
-export default Generator;
+}
