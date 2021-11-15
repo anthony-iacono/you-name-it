@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
@@ -31,7 +32,8 @@
     "ignorePatterns": [
       "node_modules/",
       "src/serviceWorker.js",
-      "src/reportWebVitals.js"
+      "src/reportWebVitals.js",
+      "cypress/*"
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
@@ -70,6 +72,7 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-flow": "^7.16.0",
     "babel-eslint": "^10.1.0",
+    "cypress": "^9.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.3",
