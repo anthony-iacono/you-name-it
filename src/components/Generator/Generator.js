@@ -12,7 +12,7 @@ export default function Generator({ keywords }: GeneratorProps) {
   let inputBoxes;
   if (keywords) {
     inputBoxes = keywords.map((keyword) => (
-      <KeywordBox keyword={keyword} />
+      <KeywordBox keyword={keyword} key={keyword} />
     ));
   }
 
