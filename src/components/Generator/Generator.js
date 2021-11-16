@@ -36,13 +36,23 @@ export default function Generator({ keywords }: GeneratorProps) {
       <Link to="history">
         <button type="button">History</button>
       </Link>
-      <h2 className="generated-name">{generatedName}</h2>
-      <div className="inputBoxContainer">
-        { !keywords.length && <h2>Please go back a step and add some keywords.</h2> }
-        { keywords.length && !inputBoxes.length
-          ? <h2>Loading...</h2>
-          : inputBoxes }
-      </div>
+      { keywords.length === 0 && (
+        <>
+          <h2>Please go back and add some keywords</h2>
+          <Link to="/">
+            <button type="button">Back</button>
+          </Link>
+        </>
+      )}
+      { keywords.length > 0 && inputBoxes.length === 0 && <h2>Loading...</h2> }
+      { keywords.length > 0 && inputBoxes.length > 0 && (
+        <>
+          <h2 className="generated-name">{ generatedName }</h2>
+          <div className="inputBoxContainer">
+            { inputBoxes }
+          </div>
+        </>
+      )}
     </main>
   );
 }
