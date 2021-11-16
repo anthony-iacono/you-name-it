@@ -9,7 +9,7 @@ export default function Favorites({ favorites }: FavoritesProps) {
   return (
     <div>
       <h2>Favorites</h2>
-      { !favorites && (
+      { !favorites.length && (
         <>
           <p>Go back and add some favorites</p>
           <Link to="/results">

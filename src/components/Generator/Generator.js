@@ -33,6 +33,9 @@ export default function Generator({ keywords }: GeneratorProps) {
 
   return (
     <main>
+      <Link to="/favorites">
+        <button type="button">Favorites</button>
+      </Link>
       { keywords.length === 0 && (
         <>
           <h2>Please go back and add some keywords</h2>
