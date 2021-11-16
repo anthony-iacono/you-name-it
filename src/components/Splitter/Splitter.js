@@ -24,7 +24,7 @@ export default function Splitter({ submitUserInput }: SplitterProps) {
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
-        <Link to="/generator">
+        <Link to="/results">
           <button
             className="button cy-button"
             type="submit"

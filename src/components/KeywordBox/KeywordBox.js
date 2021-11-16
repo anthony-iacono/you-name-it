@@ -49,7 +49,9 @@ export default function KeywordBox({ keyword, handleSelection, index }: KeywordB
         key={keyword}
       />
       <label htmlFor={keyword}>{keyword}</label>
-      { !synonymRadioBtns ? <h2>Loading...</h2> : synonymRadioBtns}
+      { !synonymRadioBtns
+        ? <h4>Could not come up with anything for this word. Please try another</h4>
+        : synonymRadioBtns }
     </div>
   );
 }

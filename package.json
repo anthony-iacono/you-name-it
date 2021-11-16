@@ -1,5 +1,6 @@
 {
   "name": "you-name-it",
+  "homepage": "https://anthony-iacono.github.io/you-name-it",
   "main": "lib/index.js",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +21,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "prepublish": "npm run build",
-    "flow": "flow"
+    "flow": "flow",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +40,13 @@
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
+      "max-len": [
+        0,
+        {
+          "ignoreStrings": true,
+          "ignoreComments": true
+        }
+      ],
       "import/no-extraneous-dependencies": [
         "error",
         {
@@ -79,6 +89,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "flow-bin": "^0.164.0"
+    "flow-bin": "^0.164.0",
+    "gh-pages": "^3.2.3"
   }
 }

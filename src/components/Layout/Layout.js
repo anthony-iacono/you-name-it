@@ -6,13 +6,13 @@ export default function Layout() {
     <div>
       <nav>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Instructions</Link>
         </li>
         <li>
-          <Link to="/splitter">Splitter</Link>
+          <Link to="/form">Generate</Link>
         </li>
         <li>
-          <Link to="/generator">Generator</Link>
+          <Link to="/results">Collaborate</Link>
         </li>
       </nav>
       <Outlet />
