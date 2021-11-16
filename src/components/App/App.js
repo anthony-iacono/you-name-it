@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
@@ -10,7 +10,6 @@ import NoMatch from '../NoMatch/NoMatch';
 export default function App(): React.Node {
   const [keywords, setKeywords] = useState([]);
   const submitUserInput = (userInput) => {
-    console.log('here');
     setKeywords(userInput);
   };
   return (

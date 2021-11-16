@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import './Generator.css';
 import KeywordBox from '../KeywordBox/KeywordBox';
 
