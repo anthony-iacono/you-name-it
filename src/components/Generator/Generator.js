@@ -5,9 +5,10 @@ import SynonymList from '../SynonymList/SynonymList';
 
 type GeneratorProps = {
   keywords: string[],
+  addFavorite: () => void,
 }
 
-export default function Generator({ keywords }: GeneratorProps) {
+export default function Generator({ keywords, addFavorite }: GeneratorProps) {
   const [selectedWords, setSelectedWords] = useState(keywords);
   const generatedName = selectedWords.join(' ');
 
@@ -33,6 +34,9 @@ export default function Generator({ keywords }: GeneratorProps) {
 
   return (
     <main>
+      <Link to="/favorites">
+        <button className="cy-view-favorites-btn" type="button">Favorites</button>
+      </Link>
       { keywords.length === 0 && (
         <>
           <h2>Please go back and add some keywords</h2>
@@ -45,6 +49,7 @@ export default function Generator({ keywords }: GeneratorProps) {
       { keywords.length > 0 && inputBoxes.length > 0 && (
         <>
           <h2 className="generated-name cy-generated-name">{ generatedName }</h2>
+          <button onClick={() => addFavorite(generatedName)} className="favorite-btn cy-favorite-btn" type="button">💛</button>
           <div className="synonyms-box cy-synonyms-box">
             { inputBoxes }
           </div>
