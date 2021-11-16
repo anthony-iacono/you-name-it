@@ -28,15 +28,17 @@ export default function KeywordSplitter({ submitUserInput }: KeywordSplitterProp
           value={userInput}
           onChange={(event) => setUserInput(event.target.value)}
         />
-        <Link to="/results">
-          <button
-            className="button cy-button"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
-        </Link>
+        { userInput && (
+          <Link to="/results">
+            <button
+              className="button cy-button"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </Link>
+        )}
       </form>
     </div>
   );
