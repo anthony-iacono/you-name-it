@@ -9,7 +9,6 @@ type SplitterProps = {
 export default function Splitter({ submitUserInput }: SplitterProps) {
   const [userInput, setUserInput] = useState('');
   const handleSubmit = (e) => {
-    // e.preventDefault();
     const splitKeywords = userInput.split(' ');
     submitUserInput(splitKeywords);
   };

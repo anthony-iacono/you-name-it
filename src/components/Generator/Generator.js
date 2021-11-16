@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Generator.css';
 import KeywordBox from '../KeywordBox/KeywordBox';
 
@@ -30,14 +31,17 @@ export default function Generator({ keywords }: GeneratorProps) {
   const generatedName = selectedWords.join(' ');
 
   return (
-    <div>
-      <h2>{generatedName}</h2>
+    <main>
+      <Link to="history">
+        <button type="button">History</button>
+      </Link>
+      <h2 className="generated-name">{generatedName}</h2>
       <div className="inputBoxContainer">
         { !keywords.length && <h2>Please go back a step and add some keywords.</h2> }
         { keywords.length && !inputBoxes.length
           ? <h2>Loading...</h2>
           : inputBoxes }
       </div>
-    </div>
+    </main>
   );
 }

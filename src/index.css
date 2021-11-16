@@ -4,8 +4,7 @@ html {
 
 body {
   margin: 0;
-  background-image: url('./assets/slot-machine.jpg');
-  background-size: cover;
-  font-family: 'Racing Sans One', cursive;
-  color: white;
+  font-family: sans-serif;
+  color: #FEC201;
+  background-color: #006A4F;
 }
