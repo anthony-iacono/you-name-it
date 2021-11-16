@@ -32,7 +32,9 @@ export default function Generator({ keywords }: GeneratorProps) {
   return (
     <div>
       <h2>{generatedName}</h2>
-      { !inputBoxes.length ? <h2>Loading...</h2> : inputBoxes }
+      <div className="inputBoxContainer">
+        { !inputBoxes.length ? <h2>Loading...</h2> : inputBoxes }
+      </div>
     </div>
   );
 }
