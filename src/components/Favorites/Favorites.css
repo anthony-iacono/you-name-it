@@ -5,5 +5,16 @@
 }
 
 .favorite-box {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
   text-transform: capitalize;
+}
+
+.favorite-text {
+  margin-right: 10px;
+}
+
+.remove-favorite-btn {
+  margin-top: 0;
 }

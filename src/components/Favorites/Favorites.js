@@ -3,12 +3,20 @@ import './Favorites.css';
 
 type FavoritesProps = {
   favorites: string[],
+  removeFavorite: () => void,
 }
 
-export default function Favorites({ favorites }: FavoritesProps) {
+export default function Favorites({ favorites, removeFavorite }: FavoritesProps) {
   const favoriteBoxes = favorites.map((favorite) => (
     <div className="favorite-box" key={favorite}>
-      <p>{favorite}</p>
+      <p className="favorite-text">{favorite}</p>
+      <button
+        className="remove-favorite-btn"
+        type="button"
+        onClick={() => removeFavorite(favorite)}
+      >
+        ❌
+      </button>
     </div>
   ));
 

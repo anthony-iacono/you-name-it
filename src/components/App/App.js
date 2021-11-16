@@ -19,6 +19,10 @@ export default function App(): React.Node {
     setFavorites([...favorites, newFavorite]);
   };
 
+  const removeFavorite = (oldFavorite) => {
+    setFavorites(favorites.filter((favorite) => favorite !== oldFavorite));
+  };
+
   return (
     <div>
       <Header />
@@ -34,7 +38,12 @@ export default function App(): React.Node {
         />
         <Route
           path="favorites"
-          element={<Favorites favorites={favorites} />}
+          element={(
+            <Favorites
+              favorites={favorites}
+              removeFavorite={removeFavorite}
+            />
+          )}
         />
         <Route path="*" element={<NoMatch />} />
       </Routes>
