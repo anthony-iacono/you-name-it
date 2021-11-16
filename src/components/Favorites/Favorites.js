@@ -11,7 +11,7 @@ export default function Favorites({ favorites }: FavoritesProps) {
       <h2>Favorites</h2>
       { !favorites && (
         <>
-          <p>Go back and add some favorites!</p>
+          <p>Go back and add some favorites</p>
           <Link to="/results">
             <button type="button">Back</button>
           </Link>
