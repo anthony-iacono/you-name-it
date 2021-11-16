@@ -18,3 +18,9 @@ button {
 .synonyms-box {
   display: flex;
 }
+
+.favorite-btn {
+  background-color: #8B0001;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
