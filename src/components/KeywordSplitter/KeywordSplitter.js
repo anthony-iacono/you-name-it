@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Splitter.css';
+import './KeywordSplitter.css';
 
-type SplitterProps = {
+type KeywordSplitterProps = {
   submitUserInput: (string) => void;
 }
 
-export default function Splitter({ submitUserInput }: SplitterProps) {
+export default function KeywordSplitter({ submitUserInput }: KeywordSplitterProps) {
   const [userInput, setUserInput] = useState('');
-  const handleSubmit = (e) => {
+
+  const handleSubmit = () => {
     const splitKeywords = userInput.split(' ');
     submitUserInput(splitKeywords);
   };
+
   return (
     <div>
       <form className="form cy-form">
@@ -19,15 +21,15 @@ export default function Splitter({ submitUserInput }: SplitterProps) {
           aria-label="keywords"
           className="input cy-input"
           type="text"
-          placeholder="enter keywords here"
+          placeholder="keywords"
           value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
+          onChange={(event) => setUserInput(event.target.value)}
         />
         <Link to="/results">
           <button
             className="button cy-button"
             type="submit"
-            onClick={(e) => handleSubmit(e)}
+            onClick={handleSubmit}
           >
             Submit
           </button>

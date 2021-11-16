@@ -1,56 +1,58 @@
 import { useState, useEffect } from 'react';
-import './KeywordBox.css';
+import './SynonymList.css';
 import getSynonyms from '../../apiCalls';
 
-type KeywordBoxProps = {
+type SynonymListProps = {
   keyword: string,
   handleSelection: () => void,
   index: number,
 }
 
-export default function KeywordBox({ keyword, handleSelection, index }: KeywordBoxProps) {
+export default function SynonymList({ keyword, handleSelection, index }: SynonymListProps) {
   const [selectedWord, setSelectedWord] = useState(keyword);
   const [synonyms, setSynonyms] = useState([]);
-  const handleChange = (e) => {
-    handleSelection(e, index);
-    setSelectedWord(e.target.value);
+  const handleChange = (event) => {
+    handleSelection(event, index);
+    setSelectedWord(event.target.value);
   };
   let synonymRadioBtns;
+
   useEffect(() => {
     getSynonyms(keyword)
       .then((synonymsFound) => (
         setSynonyms(synonymsFound.slice(0, 25))
       ));
   }, [keyword]);
+
   if (synonyms.length) {
     synonymRadioBtns = synonyms.map((synonym) => (
-      <div className="synonym-radio-btn">
+      <div key={synonym} className="synonym-radio-btn">
         <input
           type="radio"
           id={synonym}
           name={keyword}
           value={synonym}
           checked={synonym === selectedWord}
-          onChange={(e) => handleChange(e)}
-          key={synonym}
+          onChange={(event) => handleChange(event)}
         />
         <label htmlFor={synonym}>{synonym}</label>
       </div>
     ));
   }
+
   return (
-    <div className="keyword-box">
+    <div className="synonym-list-box">
       <input
         type="radio"
         name={keyword}
         value={keyword}
         checked={keyword === selectedWord}
-        onChange={(e) => handleChange(e)}
+        onChange={(event) => handleChange(event)}
         key={keyword}
       />
       <label htmlFor={keyword}>{keyword}</label>
       { !synonymRadioBtns
-        ? <h4>Could not come up with anything for this word. Please try another</h4>
+        ? <h4>Please try another keyword</h4>
         : synonymRadioBtns }
     </div>
   );

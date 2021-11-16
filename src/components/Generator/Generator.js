@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Generator.css';
-import KeywordBox from '../KeywordBox/KeywordBox';
+import SynonymList from '../SynonymList/SynonymList';
 
 type GeneratorProps = {
   keywords: string[],
@@ -9,26 +9,27 @@ type GeneratorProps = {
 
 export default function Generator({ keywords }: GeneratorProps) {
   const [selectedWords, setSelectedWords] = useState(keywords);
-  const handleSelection = (e, i) => {
+  const generatedName = selectedWords.join(' ');
+
+  const handleSelection = (event, index) => {
     setSelectedWords((prevState) => {
       const newState = prevState.slice();
-      newState[i] = e.target.value;
+      newState[index] = event.target.value;
       return newState;
     });
   };
+
   let inputBoxes;
   if (keywords) {
-    inputBoxes = keywords.map((keyword, i) => (
-      <KeywordBox
+    inputBoxes = keywords.map((keyword, index) => (
+      <SynonymList
         keyword={keyword}
         handleSelection={handleSelection}
         key={keyword}
-        index={i}
+        index={index}
       />
     ));
   }
-
-  const generatedName = selectedWords.join(' ');
 
   return (
     <main>
