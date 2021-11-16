@@ -2,13 +2,10 @@
 *A collaborative name generator*
 
 ## Abstract
-
+This name generator allows the user to enter keywords, generate synonyms, and construct name for their latest project, app, or anything else... you name it!
 
 ## Demo
-
-
-## Screenshots
-
+![Nov-15-2021 23-29-54](https://user-images.githubusercontent.com/72999840/141940369-b08852a2-6659-4899-ad58-81bcc298fc11.gif)
 
 ## Goals
 - Demonstrate mastery of React, React Router, asynchronous JavaScript, and end-to-end testing with Cypress
@@ -50,7 +47,7 @@ Made with [Create React App](https://reactjs.org/docs/create-a-new-react-app.htm
 - [Wireframe](https://www.figma.com/file/yiTkThOEDB0yAXhhUwCunr/Rancid-Tomatillos?node-id=0%3A1) created using [Canva](https://www.canva.com/)
 
 ## Challenges & Wins
-  -
+  - Implementing Router v6
 
 ## Future Iterations
-  -
+  - Allow user to change an individual word and get a new list of synonyms
