@@ -51,3 +51,4 @@ Made with [Create React App](https://reactjs.org/docs/create-a-new-react-app.htm
 
 ## Future Iterations
   - Allow user to change an individual word and get a new list of synonyms
+  - Add history, allowing the user to view previously generated names
