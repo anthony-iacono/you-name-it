@@ -16,6 +16,9 @@ export default function KeywordSplitter({ submitUserInput }: KeywordSplitterProp
 
   return (
     <div>
+      <h2 className="instructions">
+        Enter some keywords to start generating names:
+      </h2>
       <form className="form cy-form">
         <input
           aria-label="keywords"
