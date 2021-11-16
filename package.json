@@ -24,7 +24,8 @@
     "prepublish": "npm run build",
     "flow": "flow",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "cypress": "./node_modules/.bin/cypress open"
   },
   "eslintConfig": {
     "extends": [

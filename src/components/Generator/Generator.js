@@ -35,7 +35,7 @@ export default function Generator({ keywords, addFavorite }: GeneratorProps) {
   return (
     <main>
       <Link to="/favorites">
-        <button type="button">Favorites</button>
+        <button className="cy-view-favorites-btn" type="button">Favorites</button>
       </Link>
       { keywords.length === 0 && (
         <>
@@ -49,7 +49,7 @@ export default function Generator({ keywords, addFavorite }: GeneratorProps) {
       { keywords.length > 0 && inputBoxes.length > 0 && (
         <>
           <h2 className="generated-name cy-generated-name">{ generatedName }</h2>
-          <button onClick={() => addFavorite(generatedName)} className="favorite-btn" type="button">💛</button>
+          <button onClick={() => addFavorite(generatedName)} className="favorite-btn cy-favorite-btn" type="button">💛</button>
           <div className="synonyms-box cy-synonyms-box">
             { inputBoxes }
           </div>

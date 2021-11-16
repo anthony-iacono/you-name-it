@@ -9,9 +9,9 @@ type FavoritesProps = {
 export default function Favorites({ favorites, removeFavorite }: FavoritesProps) {
   const favoriteBoxes = favorites.map((favorite) => (
     <div className="favorite-box" key={favorite}>
-      <p className="favorite-text">{favorite}</p>
+      <p className="favorite-text cy-favorite-text">{favorite}</p>
       <button
-        className="remove-favorite-btn"
+        className="remove-favorite-btn cy-remove-favorite-btn"
         type="button"
         onClick={() => removeFavorite(favorite)}
       >
@@ -24,7 +24,7 @@ export default function Favorites({ favorites, removeFavorite }: FavoritesProps)
     <div className="favorites-container">
       <h2>Favorites</h2>
       { !favorites.length && (
-        <p>Go back and add some favorites</p>
+        <p className="no-favorites-message cy-no-favorites-message">Go back and add some favorites</p>
       )}
       {favorites.length > 0 && favoriteBoxes }
       <Link to="/results">
