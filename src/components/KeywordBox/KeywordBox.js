@@ -13,7 +13,9 @@ export default function KeywordBox({ keyword }: KeywordBoxProps) {
   let synonymRadioBtns;
   useEffect(() => {
     getSynonyms(keyword)
-      .then((synonymsFound) => setSynonyms(synonymsFound));
+      .then((synonymsFound) => (
+        setSynonyms(synonymsFound.slice(0, 25))
+      ));
   }, [keyword]);
   if (synonyms.length) {
     synonymRadioBtns = synonyms.map((synonym) => (

@@ -5,8 +5,8 @@ export default function getSynonyms(keyword) {
       const synonymsFound = [];
       if (datum.meta.id === keyword) {
         datum.meta.syns.forEach((synonyms) => {
-          synonyms.forEach((synonym) => {
-            if (!synonymsFound.includes(synonym)) {
+          synonyms.forEach((synonym, i) => {
+            if (i < 4 && !synonymsFound.includes(synonym)) {
               synonymsFound.push(synonym);
             }
           });
