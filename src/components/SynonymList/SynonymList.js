@@ -20,7 +20,7 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
   useEffect(() => {
     getSynonyms(keyword)
       .then((synonymsFound) => (
-        setSynonyms(synonymsFound.slice(0, 25))
+        setSynonyms(synonymsFound.slice(0, 20))
       ));
   }, [keyword]);
 

@@ -48,6 +48,9 @@ export default function Generator({ keywords }: GeneratorProps) {
           <div className="synonyms-box cy-synonyms-box">
             { inputBoxes }
           </div>
+          <Link to="/">
+            <button type="button">Back</button>
+          </Link>
         </>
       )}
     </main>
