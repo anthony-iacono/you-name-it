@@ -1,4 +1,4 @@
-describe('Splitter', () => {
+describe('KeyWordSplitter', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/');
   });
