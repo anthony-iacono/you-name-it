@@ -6,13 +6,7 @@ export default function Layout() {
     <div>
       <nav>
         <li>
-          <Link to="/">Instructions</Link>
-        </li>
-        <li>
-          <Link to="/form">Generate</Link>
-        </li>
-        <li>
-          <Link to="/results">Collaborate</Link>
+          <Link to="/history">History</Link>
         </li>
       </nav>
       <Outlet />
