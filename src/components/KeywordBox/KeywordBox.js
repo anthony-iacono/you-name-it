@@ -3,13 +3,18 @@ import './KeywordBox.css';
 import getSynonyms from '../../apiCalls';
 
 type KeywordBoxProps = {
-  keyword: string;
+  keyword: string,
+  handleSelection: () => void,
+  index: number,
 }
 
-export default function KeywordBox({ keyword }: KeywordBoxProps) {
+export default function KeywordBox({ keyword, handleSelection, index }: KeywordBoxProps) {
   const [selectedWord, setSelectedWord] = useState(keyword);
   const [synonyms, setSynonyms] = useState([]);
-  const handleChange = (e) => setSelectedWord(e.target.value);
+  const handleChange = (e) => {
+    handleSelection(e, index);
+    setSelectedWord(e.target.value);
+  };
   let synonymRadioBtns;
   useEffect(() => {
     getSynonyms(keyword)
