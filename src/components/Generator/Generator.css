@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.generated-name {
+  background-color: #8B0001;
+  text-transform: capitalize;
+  font-family: serif;
+  padding: 10px;
+}
+
+.synonyms-box {
+  display: flex;
+}
