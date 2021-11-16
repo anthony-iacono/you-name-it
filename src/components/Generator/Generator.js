@@ -33,9 +33,6 @@ export default function Generator({ keywords }: GeneratorProps) {
 
   return (
     <main>
-      <Link to="history">
-        <button type="button">History</button>
-      </Link>
       { keywords.length === 0 && (
         <>
           <h2>Please go back and add some keywords</h2>
@@ -47,8 +44,8 @@ export default function Generator({ keywords }: GeneratorProps) {
       { keywords.length > 0 && inputBoxes.length === 0 && <h2>Loading...</h2> }
       { keywords.length > 0 && inputBoxes.length > 0 && (
         <>
-          <h2 className="generated-name">{ generatedName }</h2>
-          <div className="inputBoxContainer">
+          <h2 className="generated-name cy-generated-name">{ generatedName }</h2>
+          <div className="synonyms-box cy-synonyms-box">
             { inputBoxes }
           </div>
         </>

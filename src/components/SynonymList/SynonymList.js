@@ -43,6 +43,7 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
   return (
     <div className="synonym-list-box">
       <input
+        className="cy-synonym-radio-btn"
         type="radio"
         name={keyword}
         value={keyword}
