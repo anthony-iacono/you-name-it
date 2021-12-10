@@ -56,6 +56,7 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
         key={keyword}
       />
       <label htmlFor={keyword}>{keyword}</label>
+      { loading && <h4>Loading...</h4> }
       { (!synonymRadioBtns && !loading)
         ? (
           <div className="error-message-box">
