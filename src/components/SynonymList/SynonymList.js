@@ -19,9 +19,11 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
 
   useEffect(() => {
     getSynonyms(keyword)
-      .then((synonymsFound) => (
-        setSynonyms(synonymsFound.slice(0, 20))
-      ));
+      .then((synonymsFound) => {
+        if (synonymsFound) {
+          setSynonyms(synonymsFound.slice(0, 20));
+        }
+      });
   }, [keyword]);
 
   if (synonyms.length) {
@@ -53,7 +55,13 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
       />
       <label htmlFor={keyword}>{keyword}</label>
       { !synonymRadioBtns
-        ? <h4>Please try another keyword</h4>
+        ? (
+          <div className="error-message-box">
+            <h4>
+              No synonyms found. Please try another keyword
+            </h4>
+          </div>
+        )
         : synonymRadioBtns }
     </div>
   );
