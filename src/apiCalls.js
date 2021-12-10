@@ -13,5 +13,8 @@ export default function getSynonyms(keyword) {
         });
       }
       return acc.concat(synonymsFound);
-    }, []));
+    }, []))
+    .catch((error) => {
+      console.log(error);
+    });
 }

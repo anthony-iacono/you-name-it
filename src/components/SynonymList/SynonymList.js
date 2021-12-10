@@ -11,6 +11,7 @@ type SynonymListProps = {
 export default function SynonymList({ keyword, handleSelection, index }: SynonymListProps) {
   const [selectedWord, setSelectedWord] = useState(keyword);
   const [synonyms, setSynonyms] = useState([]);
+  const [loading, setLoading] = useState(true);
   const handleChange = (event) => {
     handleSelection(event, index);
     setSelectedWord(event.target.value);
@@ -19,9 +20,12 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
 
   useEffect(() => {
     getSynonyms(keyword)
-      .then((synonymsFound) => (
-        setSynonyms(synonymsFound.slice(0, 20))
-      ));
+      .then((synonymsFound) => {
+        setLoading(false);
+        if (synonymsFound) {
+          setSynonyms(synonymsFound.slice(0, 20));
+        }
+      });
   }, [keyword]);
 
   if (synonyms.length) {
@@ -52,8 +56,15 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
         key={keyword}
       />
       <label htmlFor={keyword}>{keyword}</label>
-      { !synonymRadioBtns
-        ? <h4>Please try another keyword</h4>
+      { loading && <h4>Loading...</h4> }
+      { (!synonymRadioBtns && !loading)
+        ? (
+          <div className="error-message-box">
+            <h4>
+              No synonyms found. Please try another keyword.
+            </h4>
+          </div>
+        )
         : synonymRadioBtns }
     </div>
   );
