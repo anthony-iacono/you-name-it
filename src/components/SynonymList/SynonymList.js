@@ -58,7 +58,7 @@ export default function SynonymList({ keyword, handleSelection, index }: Synonym
         ? (
           <div className="error-message-box">
             <h4>
-              No synonyms found. Please try another keyword
+              No synonyms found. Please try another keyword.
             </h4>
           </div>
         )
